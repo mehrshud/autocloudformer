@@ -1,0 +1,69 @@
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# TensorFlow
+.tensorflow/
+tf.log
+
+# AWS SDK
+.aws/
+.aws_credentials
+
+# Google Cloud SDK
+.gcloud/
+.cloud-apis
+
+# IDE files
+.vscode/
+.pydev/
+.idea/
+*.iml
+*.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+ехеаtchDataStore
+ehthumbs.db
+Desktop.ini
+
+# Docker
+Dockerfile
+*.dockerignore
+docker-compose.yaml
+docker-compose.yml
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfvars
+
+# Secrets
+secrets.json
+secrets.yaml
+secrets.txt
+*.secret
+*.key
+.config
+
+# Miscellaneous
+.env
+requirements.txt
+README.md
+LICENSE
+__init__.py
+*.log
+*.tmp
+*.tmp-* 
+*.tmp*/ 
+!*.gitignore
+!.gitattributes
+!.editorconfig
+!.gitmodules
