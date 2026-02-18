@@ -1,0 +1,43 @@
+# src/requirements.txt
+import logging
+from typing import List
+
+# Define required libraries
+LIBRARIES: List[str] = [
+    "tensorflow",
+    "boto3",  # AWS SDK
+    "google-cloud",  # Google Cloud SDK
+    "python-dotenv",  # for environment variables
+    "sqlalchemy"  # for database operations
+]
+
+# Try to write the requirements to file
+try:
+    with open('src/requirements.txt', 'w') as file:
+        for library in LIBRARIES:
+            file.write(f"{library}\n")
+    logging.info("Requirements written successfully")
+except Exception as e:
+    logging.error(f"Error writing requirements: {e}")
+
+from src.models import User
+from src.config import Config
+from src.database import db
+
+# Example usage
+def main() -> None:
+    """
+    Main function for testing dependencies.
+    """
+    # Create a user
+    user: User = User(id=1, name="John Doe", email="johndoe@example.com")
+    
+    # Create a config
+    config: Config = Config(debug=True, db_url="sqlite:///example.db")
+    
+    # Log the user and config
+    logging.info(f"User: {user.name}, {user.email}")
+    logging.info(f"Config: debug={config.debug}, db_url={config.db_url}")
+
+if __name__ == "__main__":
+    main()
